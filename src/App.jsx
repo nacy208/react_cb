@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import MyComponent from './components/learn/MyComponent'
-import SecondComponent from './components/learn/SecondComponent'
+import { SecondComponent } from './components/learn/SecondComponent'
 
 //component = html + js+css
 
