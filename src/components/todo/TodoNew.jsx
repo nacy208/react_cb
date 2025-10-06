@@ -1,6 +1,7 @@
+
 const TodoNew = () => {
     return (<div className="todo-new">
-        <input type="text" placeholder="nhap viec can lam" />
+        <input type="text" placeholder="check list todo" />
         <button>add</button>
     </div>)
 }

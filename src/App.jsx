@@ -7,8 +7,10 @@ import reactLogo from './assets/react.svg';
 
 
 const App = () => {
-
-
+  //{key:value}
+  const learn = 'olivia';
+  const age = 21;
+  const data = { name: 'olivia', age: 21, address: 'hn' }
   return (
     <>
       <div className="todo-container">
@@ -16,9 +18,13 @@ const App = () => {
       </div>
 
       <TodoNew />
-      <TodoData />
+      <TodoData
+        name={learn}
+        age={age}
+        data={data}
+      />
       <div className='todo-image'>
-        <img src={reactLogo} alt="todo" />
+        <img src={reactLogo} className='logo' alt="todo" />
       </div>
     </>
   )
