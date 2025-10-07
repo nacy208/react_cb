@@ -17,8 +17,10 @@ const App = () => {
     { id: '1', title: 'learn react' },
     { id: '2', title: 'learn nodejs' },
   ])
-  const addNewTodo = () => {
-    alert('add new todo')
+  const addNewTodo = (name) => {
+    const newTodo = { id: '3', title: name }
+    setTodoList([...todoList, newTodo]);
+    //js spread tax
   }
   return (
     <>

@@ -10,7 +10,7 @@ const TodoNew = (props) => {
 
 
     const handleClick = () => {
-        console.log('check valueInput:', valueInput);
+        props.addNewTodo(valueInput);
     }
     // const handleChange = (e) => {
     //     console.log('input changed:', e.target.value);
