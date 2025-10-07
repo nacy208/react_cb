@@ -1,15 +1,22 @@
 
 //props la object
 const TodoData = (props/*{name} lay name ra ko nen*/) => {
-    console.log('props:', props);
 
+    const { todoList } = props;
     // eslint-disable-next-line no-unused-vars
     const { name, age, data } = props;
+    console.log('props:', props);
     return (
         <div className="todo-data">
-            <div>My name is : {name}</div>
-            <div>Learn React</div>
-            <div>Learn Nodejs</div>
+            {todoList.map((item) => {
+                // eslint-disable-next-line react/jsx-key
+                return (<div>
+                    <div className="todo-item" >
+                        <div>{item.title}</div>
+                        <button style={{ cursor: "pointer" }}>Delete</button>
+                    </div>
+                </div>)
+            })}
             <div>
                 {JSON.stringify(props.todoList)}
             </div>

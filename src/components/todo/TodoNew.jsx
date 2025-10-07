@@ -11,6 +11,7 @@ const TodoNew = (props) => {
 
     const handleClick = () => {
         props.addNewTodo(valueInput);
+        setValueInput('');
     }
     // const handleChange = (e) => {
     //     console.log('input changed:', e.target.value);
