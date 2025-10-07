@@ -22,6 +22,11 @@ const App = () => {
     setTodoList([...todoList, newTodo]);
     //js spread tax
   }
+
+  const deleteTodo = (id) => {
+    const newTodoList = todoList.filter((item) => item.id !== id);
+    setTodoList(newTodoList);
+  }
   return (
     <>
       <div className="todo-container">
@@ -49,6 +54,7 @@ const App = () => {
       {todoList.length > 0 ?
         <TodoData
           todoList={todoList}
+          deleteTodo={deleteTodo}
         />
         :
         <div className='todo-image'>
