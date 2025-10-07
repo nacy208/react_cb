@@ -5,28 +5,28 @@ const TodoNew = (props) => {
     console.log('props from TodoNew:', props);
     //const { addNewTodo } = props;
 
-    const [valueInput, setValueInput] = useState('olivia');
+    const [valueInput, setValueInput] = useState("");
     // addNewTodo();
 
+    const handleChange = (name) => {
+        setValueInput(name);
+    }
 
     const handleClick = () => {
+        if (valueInput.trim() === "") return; // khong cho nhap khoang trang
         props.addNewTodo(valueInput);
-        setValueInput('');
+        setValueInput("");
     }
     // const handleChange = (e) => {
     //     console.log('input changed:', e.target.value);
     // }
 
     //  cach 2
-    const handleChange = (name) => {
-        setValueInput(name);
-    }
 
     return (<div className="todo-new">
 
-        <input type="text" placeholder="check list todo" onChange={(event) => handleChange(event.target.value)} />
+        <input type="text" placeholder="check list todo" value={valueInput} onChange={(event) => handleChange(event.target.value)} />
         <button style={{ cursor: "pointer" }} onClick={handleClick} >add</button>
-        <div>Value Input: {valueInput}</div>
     </div>)
 }
 

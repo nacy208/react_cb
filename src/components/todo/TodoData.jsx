@@ -10,16 +10,16 @@ const TodoData = (props/*{name} lay name ra ko nen*/) => {
         <div className="todo-data">
             {todoList.map((item) => {
                 // eslint-disable-next-line react/jsx-key
-                return (<div>
-                    <div className="todo-item" >
+                return (<div key={item.id}>
+                    <div className={`todo-item `} >
                         <div>{item.title}</div>
                         <button style={{ cursor: "pointer" }}>Delete</button>
                     </div>
                 </div>)
             })}
-            <div>
+            {/* <div>
                 {JSON.stringify(props.todoList)}
-            </div>
+            </div> */}
         </div>
     )
 }
